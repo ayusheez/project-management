@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-white font-['Inter'];
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-black/80 backdrop-blur-lg border border-cyan-500/10 rounded-lg shadow-lg transition-all duration-300;
+    @apply hover:border-cyan-500/20;
+  }
+  
+  .hover-card {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
